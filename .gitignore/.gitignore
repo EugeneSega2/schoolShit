@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("введите знаменатель прогресии");
+
+            int n = int.Parse(Console.ReadLine());
+
+            int b = 3;
+
+            int sum = 0;
+
+            if(n > 0)
+                for (int i = 1; i <= n; i++)
+                {
+                    b *= i;
+                    sum += b;
+                }
+            else
+            {
+                Console.WriteLine("введены некорректные данные");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine("сумма значений прогрессии до {0} члена включительно равна {1}", n, sum);
+            Console.ReadKey();
+
+        }
+    }
+}
